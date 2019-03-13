@@ -1,4 +1,4 @@
-import { SHOW_BOOKS, FIND_ONE_BOOK } from './actions'
+import { SHOW_BOOKS, FIND_ONE_BOOK, CREATE_BOOK } from './actions'
 
 const initialState = {
   all: [],
@@ -11,6 +11,8 @@ export function handlerBooks(state = initialState, action) {
       return Object.assign({}, state, { all: action.payload })
     case FIND_ONE_BOOK:
       return Object.assign({}, state, { findOne: action.payload })
+    case CREATE_BOOK:
+      return Object.assign({}, state, { createBook: action.payload })
     default:
       return state
   }

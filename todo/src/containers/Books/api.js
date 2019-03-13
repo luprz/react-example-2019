@@ -12,6 +12,10 @@ class BooksApi {
   static findBook(bookId) {
     return axios.get(API_URL + bookId)
   }
+
+  static createBook(book) {
+    return axios.post(API_URL, { book })
+  }
 }
 
 export default BooksApi;
